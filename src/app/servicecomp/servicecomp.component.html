@@ -1,0 +1,61 @@
+<h1>Task2 of 15April</h1>
+<p>product works!</p>
+<button (click)="displaypro()">Display Product Details</button>
+
+<table *ngIf="proobj" border="2px" cellpadding="10px" style="background-color:chartreuse">
+
+     <tr>
+
+         <th>PRODUCT_CODE</th>
+
+        <th>PRODUCT_NAME</th>
+
+        <th>UNITPRICE</th>
+
+        <th>PRODUCT_DESCRIPTION</th>
+
+        <th>CATEGORY</th>
+
+        <th>STOCKINHAND</th>
+
+    </tr>
+
+    <tr *ngFor="let i of proobj">
+
+        <td>
+
+            <input type="text" value="{{i.pcode}}">
+
+        </td>
+
+        <td>
+
+            <input type="text" value="{{i.pname}}">
+
+        </td>
+
+        <td>
+
+            <input type="text" value="{{i.unitprice}}">
+
+        </td>
+
+        <td>
+
+            <input type="text" value="{{i.pdesc}}">
+
+        </td>
+
+        <td>
+
+            <input type="text" value="{{i.category}}">
+
+        </td>
+
+        <td>
+
+            <input type="text" value="{{i.stockinhand}}">
+
+        </td>
+    </tr>
+</table>
